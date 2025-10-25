@@ -43,3 +43,20 @@ for o1, o2 in zip(arr, arr2):
 
 arr3 = ["Jennie", "Lisa"]
 arr3.sort(key=lambda x :len(x))
+
+s = "asfd"
+print(s[0:2])
+s += "def"
+
+print("".join(arr3))
+
+from collections import deque
+
+queue = deque()
+queue.appendleft(1)
+
+print(queue)
+
+Hashset = set()
+print (1 in Hashset)
+
