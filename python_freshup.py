@@ -60,3 +60,10 @@ print(queue)
 Hashset = set()
 print (1 in Hashset)
 
+Hashmap = {}
+Hashmap["Jennie"] = 11
+print(Hashmap["Jennie"])
+
+dict1 = {"Jennie": 10, "Rosie": 39}
+
+tup = (238811, 5736)
