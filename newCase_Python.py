@@ -17,6 +17,8 @@ Description: design the actual app
         - collection of Books: use id 
         - active books: use id 
 
+    - modifications: font size 
+
 
 """
 
@@ -53,7 +55,7 @@ class Library:
     def remove_book(self, book_id): 
         if book_id in self.collection: 
             del self.collection[book_id]
-            if self.active_books == book_id
+            if self.active_books == book_id: 
                 self.active_books = None
         
     def set_active_books (self, book_id): 
