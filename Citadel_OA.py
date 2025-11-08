@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# Citadel OA Question (Reconstructed)
+# Citadel OA Question from Rednote(Reconstructed)
 #
 # You are given an array layer[] of size n.
 #
