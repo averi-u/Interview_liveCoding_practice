@@ -30,3 +30,36 @@ def count_special_subarrays(arr):
         prefix += b
 
     return ans 
+
+"""
+Question 2: Minimum Operations to Reduce Array Elements to Zero
+
+Problem Statement:
+Given an array and two integers (x) and (y), in one operation, we can pick one element and subtract (x) from it, and subtract (y) from all other elements. The goal is to determine the minimum number of operations needed to reduce all elements of the array to zero.
+"""
+from math import ceil 
+
+
+def can_k(arr, x, y, k): 
+    need_bigHits = 0 
+    diff = x - y 
+    for v in arr: 
+        left = v - k*y 
+        if left > 0: 
+            need_bigHits += ceil(left / diff)
+            if need_bigHits > k: 
+                return False
+    return need_bigHits <= k 
+
+
+def min_operations(arr, x, y): 
+    left, right = 0, max(arr) // min(x, y) + 5 
+    # +5 or anything small for room for binary search 
+
+    while left < right: 
+        mid = (left + right ) // 2 
+        if can_k(arr, x, y, mid): 
+            right = mid 
+        else: 
+            left = mid + 1 
+    return left 
